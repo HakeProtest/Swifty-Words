@@ -167,6 +167,6 @@ class ViewController: UIViewController {
     @objc func clearTapped(_ sender: UIButton) {
         
     }
-
+    var Sam = "Samiel"
 }
 
