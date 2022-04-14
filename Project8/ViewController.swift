@@ -150,9 +150,16 @@ class ViewController: UIViewController {
                 buttonView.addSubview(letterButton)
                 // add letter to letterButton Array
                 letterButtons.append(letterButton)
+                
+                letterButton.addTarget(self, action: #selector(letterTapped), for: .touchUpInside)
 
             }
         }
+        
+        // Specify target by it self and selector for action
+        // .touchUpInside = user pressed down on the button and lifted their touch while it was still inside for action to be performed
+        submit.addTarget(self, action: #selector(submitTapped), for: .touchUpInside)
+        clear.addTarget(self, action: #selector(clearTapped), for: .touchUpInside)
     }
     
     // MARK: OBJC
@@ -167,6 +174,6 @@ class ViewController: UIViewController {
     @objc func clearTapped(_ sender: UIButton) {
         
     }
-    var Sam = "Samiel"
+    
 }
 
